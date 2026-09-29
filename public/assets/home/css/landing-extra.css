@@ -1,0 +1,569 @@
+/* =====================================================================================
+   LANDING-EXTRA.CSS
+   Pelengkap untuk style.css yang sudah ada. File ini TIDAK menimpa apa pun di
+   style.css — hanya menambah kelas baru yang dipakai oleh beranda.php.
+   Muat file ini SETELAH style.css.
+===================================================================================== */
+
+:root {
+  /* satu aksen baru yang relevan dengan identitas pecinta alam,
+     dipakai secukupnya untuk elemen "eco" saja (badge, ikon) */
+  --forest: #2f6b3a;
+  --forest-light: #e7f3e9;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #4b5563;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand, .section-title {
+  font-family: "Poppins", sans-serif;
+  color: var(--navy);
+}
+
+/* ============================================================
+   BAGIAN UMUM
+============================================================ */
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.bg-section-alt {
+  background: var(--light);
+}
+
+.empty-state {
+  color: #9aa5b1;
+}
+
+.empty-state i {
+  font-size: 40px;
+  display: block;
+}
+
+/* ============================================================
+   TOP BAR (memakai var(--dark) yang sudah ada di style.css)
+============================================================ */
+
+.top-bar a.btn-outline-light {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+
+.site-navbar {
+  background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy) 100%);
+  z-index: 1500;
+}
+
+.site-navbar .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 22px;
+  padding: 22px 0;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.btn-daftar {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-daftar:hover {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline-navy {
+  background: transparent;
+  border: 1px solid #d9e0e8;
+  color: var(--navy);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline-navy:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #ffffff;
+}
+
+/* ============================================================
+   HERO / CAROUSEL
+============================================================ */
+
+.hero-carousel,
+#header-carousel,
+#header-carousel .carousel-inner,
+#header-carousel .carousel-item {
+  height: 82vh;
+  min-height: 520px;
+}
+
+.hero-slide {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 31, 58, 0.55) 0%, rgba(0, 29, 35, 0.85) 100%);
+}
+
+.hero-slide-1 {
+  background-image: url('../img/hero-1.jpg');
+}
+
+.hero-slide-2 {
+  background-image: url('../img/hero-2.jpg');
+}
+
+.hero-carousel .carousel-caption {
+  z-index: 2;
+  background: transparent;
+}
+
+.badge-eco {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 767.98px) {
+  .hero-carousel,
+  #header-carousel,
+  #header-carousel .carousel-inner,
+  #header-carousel .carousel-item {
+    height: 78vh;
+    min-height: 460px;
+  }
+
+  .hero-text .display-4 {
+    font-size: 1.9rem;
+  }
+}
+
+/* ============================================================
+   STATISTIK
+============================================================ */
+
+.stats-section {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+  margin-top: -1px;
+}
+
+.stat-box i {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ============================================================
+   TENTANG KAMI
+============================================================ */
+
+.about-media {
+  position: relative;
+}
+
+.about-media-main img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(11, 31, 58, 0.18);
+}
+
+.about-media-badge {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.15);
+}
+
+.about-media-badge i {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.about-media-badge strong {
+  display: block;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.about-media-badge small {
+  color: #9aa5b1;
+  font-size: 12px;
+}
+
+.mini-card {
+  display: flex;
+  gap: 14px;
+  background: var(--light);
+  border-radius: 14px;
+  padding: 18px;
+  height: 100%;
+}
+
+.mini-card i {
+  font-size: 20px;
+  color: var(--primary);
+  margin-top: 3px;
+}
+
+.mini-card strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.mini-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #6b7684;
+}
+
+.misi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13.5px;
+  color: #6b7684;
+}
+
+.misi-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 4px;
+}
+
+.misi-list li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--forest);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 11px;
+}
+
+/* ============================================================
+   KEGIATAN (memakai .service-item dari style.css)
+============================================================ */
+
+.service-item {
+  background: #ffffff;
+  border: 1px solid #eef1f5;
+  transition: 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(11, 31, 58, 0.1);
+}
+
+.kegiatan-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--secondary);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* ============================================================
+   PENGURUS (memakai .team-item dari style.css)
+============================================================ */
+
+.team-photo {
+  height: 220px;
+  background: var(--light);
+  overflow: hidden;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  color: #c3ccd6;
+  background: #eef1f5;
+}
+
+.team-item {
+  background: #ffffff;
+  border: 1px solid #eef1f5;
+  box-shadow: 0 10px 25px rgba(11, 31, 58, 0.05);
+}
+
+/* ============================================================
+   GALERI
+============================================================ */
+
+.gallery-item {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: #c3ccd6;
+  background: #eef1f5;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 12px 14px;
+  background: linear-gradient(0deg, rgba(0, 29, 35, 0.85) 0%, rgba(0, 29, 35, 0) 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-overlay span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gallery-overlay small {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ============================================================
+   BERITA
+============================================================ */
+
+.berita-card {
+  background: #ffffff;
+  border: 1px solid #eef1f5;
+  transition: 0.3s;
+}
+
+.berita-card:hover {
+  box-shadow: 0 20px 40px rgba(11, 31, 58, 0.1);
+  transform: translateY(-4px);
+}
+
+.berita-thumb {
+  position: relative;
+  height: 190px;
+}
+
+.berita-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.berita-date {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 30px;
+}
+
+.berita-link {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+}
+
+.berita-link:hover {
+  color: var(--navy);
+}
+
+/* ============================================================
+   CTA PENDAFTARAN
+============================================================ */
+
+.cta-daftar {
+  background: linear-gradient(120deg, var(--navy) 0%, var(--navy-light) 60%, var(--primary) 160%);
+}
+
+/* ============================================================
+   KONTAK
+============================================================ */
+
+.kontak-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.kontak-info-item {
+  display: flex;
+  gap: 16px;
+  background: var(--light);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.kontak-info-item i {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 12px;
+  background: var(--secondary);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.kontak-info-item strong {
+  display: block;
+  color: var(--navy);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.kontak-info-item p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #6b7684;
+}
+
+.map-wrap {
+  height: 100%;
+  min-height: 320px;
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.08);
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 991.98px) {
+  .site-navbar .nav-link {
+    padding: 10px 0;
+    margin-right: 0;
+    color: #ffffff !important;
+  }
+
+  .about-media-badge {
+    left: 10px;
+    bottom: -18px;
+  }
+}

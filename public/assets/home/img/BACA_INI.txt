@@ -1,0 +1,8 @@
+Taruh gambar berikut di folder ini (lihat README.md untuk detail ukuran):
+
+- logo.png
+- hero-1.jpg
+- hero-2.jpg
+- about-1.jpg
+
+Sebelum gambar tersedia, halaman tetap tampil normal (memakai placeholder ikon di bagian galeri & berita).

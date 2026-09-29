@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Jangan proses folder/file yang memang ada
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Semua request diarahkan ke folder public
+RewriteRule ^(.*)$ public/$1 [L]
